@@ -1,0 +1,87 @@
+Start HTML5 on device Domain-Controller & log in as playerone
+
+Start Server Manager
+
+Start Tools ==> "Active Directory Users and Computers"
+
+On daswebs.com, right-click New ==> Group
+
+On the “New Object - Group” dialog, enter “HRSec” as Group Name & click “OK”
+
+Using the same method, add the groups “AccountingSec” and “Miscellaneous”
+
+1. On the right-hand panel, right-click “AccountingSec”, select “Properties”
+
+2. In the “AccountingSec Properties” dialog, click the “Members” tab & click “Add”
+
+3. In the ensuing dialog, add “Brimlock Stones” & click “OK”, then “OK”
+
+Repeat the previous three steps, adding “Sergio Chanel” to group “HRSec”
+
+In the left-hand panel, click “Users”, then right-click “DomainAdmins” in the right-hand panel & select “Properties”
+
+In the “DomainAdmins Properties” dialog, click the “Members” tab & click “Add”
+
+In the ensuing dialog, add “Gary Thatcher” & click “OK”, then “OK”
+
+Select users “Guest”, “Ione Leventis”, “Richard LeGrand”, “Rob”, “sshd”, “sshd_server” & “Than Akasaka”, right-click & select “Add to a group...”
+
+In the ensuing “Select Groups” dialog, enter “Miscellaneous” & click “OK” twice
+
+In the right-hand panel, select user “Rob”, right-click & select “Disable Account”
+
+In the right-hand panel, select user “Brimlock Stones”, right-click & select “Properties”
+
+Select the “Account” tab & click the “Log On To...” button
+
+In the “Logon Workstation” dialog, select the “The following computers” radio button
+
+Under “Computer name:”, type in “WORKSTATION”, click “Add”, then “OK”; lastly click “Apply”, then “OK”
+
+In the right-hand panel, select user “Sergio Chanel”, right-click & select “Properties”
+
+Select the “Account” tab & click the “Log On To...” button
+
+In the “Logon Workstation” dialog, select the “The following computers” radio button
+
+Under “Computer name:”, type in “WORKSTATION”, click “Add”, then “OK”
+
+Exit the “Active Directory Users and Computers” dialog
+
+Exit Server Manager
+
+Start “File Explorer”, select “Network” & turn on network discovery and file sharing
+
+Double click “FILESHARE”, right-click “Accounting” & select “Properties”
+
+In the “Properties” dialog, select the “Security” tab & click the “Edit” button
+
+Select “DomainAdmins” in the top panel & check “Full Control” in the lower panel; click “Apply” & then “Yes”
+
+Click the “Add” button three times to add the “HRSec”, “AccountingSec” and “Miscellaneous” groups
+
+In the upper panel, select “HRSec” & check “Full Control” under “Deny” in the lower panel
+
+In the upper panel, select “Miscellaneous” & check “Full Control” under “Deny” in the lower panel
+
+In the upper panel, select “AccountingSec”, uncheck “Read & execute” check “Write” under “Allow” in the lower panel
+
+Click “Apply”, then “Yes”; then “OK” twice
+
+right-click “hr” & select “Properties”
+
+In the “Properties” dialog, select the “Security” tab & click the “Edit” button
+
+Select “DomainAdmins” in the top panel & check “Full Control” in the lower panel; click “Apply” & then “Yes”
+
+Click the “Add” button three times to add the “HRSec”, “AccountingSec” and “Miscellaneous” groups
+
+In the upper panel, select “AccountingSec” & check “Full Control” under “Deny” in the lower panel
+
+In the upper panel, select “Miscellaneous” & check “Full Control” under “Deny” in the lower panel
+
+In the upper panel, select “HRSec”, uncheck “Read & execute” check “Write” under “Allow” in the lower panel
+
+Click “Apply”, then “Yes”; then “OK” twice
+
+Dismiss “File Explorer”
