@@ -1,0 +1,38 @@
+Gilly Bates @gbates
+@playerone, was going to have you create some accounts on the backup server for me but based on the security audit I just got we clearly have more
+important things to do.
+
+Thanh Akasaka @takasaka
+@gbates, I don't believe that the backup server's FTP service has been updated in a long time. To make matters worse it looks like the FTP package
+we are using on the version it is at has a serious vunerability in it!
+
+Richard LeGrand @rlegrand
+THE WEBSITE IS DOWN!
+
+Gilly Bates @gbates
+Richard, what are you talking about? You should be able to access the site at joomla.daswebs.com.
+
+Thanh Akasaka @takasaka
+The website is in fact running but it is another sore spot on this security audit. The CMS (Joomla) it is running on is also very outdated...
+
+Gilly Bates @gbates
+Really? Well, if that's the case, @playerone, those backup accounts really are out of the question now. You need to get those services updated as soon
+as possible. Do not go and change them to different packages or applications though, we picked those ones for a reason.
+
+Ione Leventis @ileventis
+Holy tacos! @everyone did you see this third line in the security audit?? Guests able to login and have admin privileges on Active Directory (Domain-controller)
+ administered systems!?!? How does that even happen!?
+
+Gilly Bates @gbates
+Oh wow. We never got around to fixing that issue... The last systems admin that worked on it was fired because of that. @playerone, I know you're already
+busy but you will need to set the AD guest user to the correct permission set. AKA no domain admin privileges.
+
+Gary Thatcher @gthatcher
+Can't believe that old admin played it off as a fake virus attack. That's the oldest trick in the book. Truely classic.
+
+Richard LeGrand @rlegrand
+VIRUS!!!! WE HAVE A VIRUS!!!!
+
+Gilly Bates @gbates
+Oh no. He's at it again. He's probably out in the halls already causing pandemonium. @playerone, get onto the prod-web server and Backup to update
+the CMS and FTP service, and also fix those permissions on the AD guest user. Get this done ASAP!!!
