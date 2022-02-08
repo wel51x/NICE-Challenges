@@ -1,0 +1,39 @@
+Log in and start terminal session
+
+Can’t use dd (per Ione’s suggestion) because no hash option; have to use dcfldd
+
+sudo mkdir /forensicimages
+
+Find thumb drive
+1. sudo fdisk -l
+2. shows /dev/sda with /dev/sda1 and
+      /dev/sdb with /dev/sdb1, /dev/sdb2 and /dev/sdb5
+3. mount | grep sd
+      shows /dev/sdb1 mounted on / ==>> /dev/sda is thumb drive
+
+check if dcfldd exists on system
+       sudo: dcfldd: command not found
+
+get dcfldd
+1. sudo apt install dcfldd
+       404  Not Found
+2. sudo apt-get update
+3. dcfldd
+       Command 'dcfldd' not found, but can be installed with:
+       sudo apt install dcfldd
+       Do you want to install it? (N/y)
+answer "y"
+
+dcfldd options:
+
+  if - use named input file
+  of - writes to named file
+  hash - set hash format
+  hashlog send hash output to file
+  vf – verify file
+
+run cmd "sudo dcfldd if=/dev/sda of=/forensicimages/forensicimage.dd hash=sha512 hashlog=/forensicimages/forensicimage.txt"
+       to create image file
+
+run cmd "sudo dcfldd if=/dev/sda vf=/forensicimages/forensicimage.dd verifylog=/forensicimages/forensicimage.txt"
+       to validate; result "Total: Match"
