@@ -1,0 +1,39 @@
+Step 1: Remove admin privileges for guests
+
+1. Log in to Domain-Controller as playeron
+
+2. Start Server Manager
+
+3. Select Tools ==> Active Directory Users and Computers
+
+4. Expand daswebs.com; click On "Users"
+
+5. On rh Panel, right-click "Guest" & select "Properties"
+
+6. Select the "Member Of" tab
+
+7. Highlight (click) "Domain Admins", click "Remove" button; click "Yes"
+
+8. Click "Apply", then "OK"
+
+Step 2: Update Joomla
+
+1. Start Firefox; point to joomla.daswebs.com/administrator
+
+2. Log in with playerone creds (NOTE: NOT admin as stated in the docs!!)
+
+3. Click button to update
+
+4. Midway through have to confirm playerone creds
+
+5. Joomla now updated to 3.6.5
+
+Step 3: Update ftp
+
+1. Log in to Prod-Web as playerone
+
+2. From cmd prompt, enter "sudo yum update" command
+
+3. Log in to Backup as playerone
+
+4. From cmd prompt, enter "sudo apt update" followed by "sudo apt full-upgrade" commands
