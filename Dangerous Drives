@@ -1,0 +1,21 @@
+I initially tried to scan the drive with Defender, but it kept telling me that the scan was interrupted.
+
+From Windows PowerShell in admin mode I tried "Start-MpScan -ScanPath e: -ScanType FullScan" but for some reason I got no results
+
+So I downloaded and installed Malwarebytes
+
+I opened File Explorer and right-clicked e:, selecting "Scan with Malwarebytes" which gave me the following files:
+
+E:\SCHOOL\IST25\VALENTINESDAY.PTT.VSX
+
+E:\TUX\EXTMENU.CFG
+
+E:\WORK\HRWORK_FILES\PERMANTENT.TMP
+
+E:\THUMB.INI
+
+as EICAR-AV-Test Malware
+
+I quarantined these, then instructed Malwarebytes to delete them permanently.
+
+Lastly, I uninstalled Malwarebytes.
