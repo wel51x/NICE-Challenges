@@ -1,0 +1,43 @@
+On Domain Crontoller, log in as playerone
+
+Start Server Manager
+
+Under Tools, click "Active Directory Users and Computers"
+
+Expand daswebs.com, click on "Users"
+
+For user "Sergio Chanel", right-click "Reset Password..."
+
+supply a new password
+
+Try logging in to WORKSTATION as DASWEBS\schanel
+
+Got a ‘The Security Database on the Server does not have a Computer Account for this Workstation Trust Relationship’ message
+
+Solution: unjoin Workstation from daswebs.com and re-join
+
+Log into Workstation as WORKSTATION\playerone
+
+***** begin unjoin process
+
+Bring up File Explorer
+
+right-click "This PC", select "Properties"
+
+click "Change Settings"
+
+click "Change"
+
+change "Member of" from Domain daswebs.com to Workgroup WKGRP
+
+click OK
+
+reboot Workstation
+
+***** end unjoin process
+
+log into Workstation as WORKSTATION\playerone
+
+repeat unjoin process, except this time change "Member of" from Workgroup WKGRP to Domain daswebs.com
+
+NOW can successfully log in to WORKSTATION as DASWEBS\schanel
