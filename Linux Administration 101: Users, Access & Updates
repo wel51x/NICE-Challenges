@@ -1,0 +1,16 @@
+Start HTML5 on Prod-Web, since the change was requested for this device (172.16.10.7)
+                   -is a CentOS device
+                   
+Log in as playerone
+
+Issue “sudo useradd gthatcher” cmd, since name must be “First initial and last name”
+
+Issue "sudo passwd gthatcher" to give password as password123 (otherwise won't be able to login)
+
+Wanted to add to sudo group, but “groups” cmd shows only playerone and wheel
+
+Issue “sudo usermod -aG wheel gthatcher” cmd since wheel group gives sudo privilege
+
+Since OS is CentOS, have to use yum to apply updates
+
+Issue “sudo yum update” command (brute-force all updates - runs a while)
