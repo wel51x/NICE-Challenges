@@ -1,0 +1,21 @@
+Start HTML5 session on device Domain-Controller
+Right-click Start icon (lower LHS) & select Run
+Enter “perfmon” & hit return
+Under “Data Collector Sets”, right-click “User Defined” & select “New” ⇒ ”Data Collector Set”
+Set name as “Disk Counters” & select “Create manually” radio button; click “Next”
+For type of data, select “Create data logs” radio button & tick “Performance counter”; click “Next”
+For Performance counter, click “Add”
+Under PhysicalDisk, select all items & click “Add >>”, then “OK”
+Click “Next” & note location name; click “Finish”
+Under “User Defined”, right-click “Disk Counters” & select “Start”
+After 2 mins, Under “User Defined”, right-click “Disk Counters” & select “Stop”
+Under Reports ⇒ “User Defined” ⇒ “Disk Counters”, double-click the location name previously-referenced in Step 9 above
+Right-click the Chart area & select “Save Data As…”
+Position to "C:\PerfLogs\Admin\", enter name "Disk_report1" & select “(*.csv)” in “Save as type”; click “Save”
+ 
+
+Start File Explorer & position to “C:\Program Files\CrystalDiskMark8”
+Right-click “DiskMark64.exe” & select “Run as administrator”
+Run the two sequential and two random tests
+When done, click “File” ⇒ “Save (text)”
+Position to "C:\PerfLogs\Admin\", enter name "Disk_report2" & click “Save”
