@@ -1,1 +1,43 @@
-Test
+1. on Prod-Web,
+    sudo -i
+    change file /etc/ssh/sshd_config AuthorizedKeysFile entry to /.ssh/authorized_keys
+    service restart sshd
+2. on Security-Desk
+    sudo -i
+    ssh-keygen (hit cr 3x)
+    ifconfig (ip addr is 172.16.30.6)
+3. on Prod-Web,
+    sftp 172.16.30.6
+    get .ssh/*pub
+    exit
+    sudo -i
+    cat /home/playerone/*pub >> /.ssh/authorized_keys
+
+4. on Workstation-Desk
+    run Powershell
+    ssh-keygen (hit cr 3x)
+    ipconfig (ip addr is 172.16.30.101)
+5. on Prod-Web,
+    sftp 172.16.30.101
+    get .ssh/*pub
+    exit
+    sudo -i
+    cat /home/playerone/*pub >> /.ssh/authorized_keys
+
+6. on Backup
+    sudo apt-get update
+    sudo apt-get install otpw-bin libpam-otpw
+    edit /etc/pam.d/sshd (via sudo)
+        comment out @include common-auth
+        add two lines:
+            auth    required    pam_otpw.so
+            session optional    pam_otpw.so
+    edit /etc/ssh/sshd_config (via sudo)
+    change the following five entries where necessary:
+        UsePrivilegeSeparation yes
+        PubkeyAuthentication yes
+        ChallengeResponseAuthentication yes
+        PasswordAuthentication no
+        UsePAM yes
+    sudo service ssh restart
+    otpw-gen > otpw-gen.out
